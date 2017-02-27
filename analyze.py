@@ -16,7 +16,12 @@ def collect_data(items):
             data[items[1]+'I'] += 1
     except KeyError as e:
         print("KeyError, word pronounciation begins with: " + str(e))
-    
+
+def analyze_file(filename='phoneticdb.txt'):
+    with open('phoneticdb.txt', 'r') as infile:
+        for line in infile:
+            parse_line(line)
+    return data 
 
 if __name__ == "__main__":
     lines = 0
