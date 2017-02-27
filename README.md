@@ -1,5 +1,5 @@
 # Gif_or_Jif
-Time to settle this debate using some good ol' fashioned data analysis.
+Time to settle this debate using some good ol' fashioned data analysis. [Results](https://imgur.com/a/XFs9B#IrZSNwt)
 
 I used the CMU Pronounciation Dictionary as my base dataset, and used Python 3.4 to parse it. To plot the data I used the python package pygal.
 
