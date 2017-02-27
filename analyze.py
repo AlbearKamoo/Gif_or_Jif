@@ -1,7 +1,7 @@
 data = {'G': 0, 'JH': 0, 'ZH': 0, 'GI': 0, 'JHI': 0, 'ZHI': 0}
 
 
-def parse_line(line):
+def parse_line(line: str):
     items = line.split()
     #print(items)
     if '(' in items[0]:
@@ -9,7 +9,7 @@ def parse_line(line):
     else:
         collect_data(items);
 
-def collect_data(items):
+def collect_data(items: [str]):
     try:
         data[items[1]] += 1
         if items[0][:2] == 'GI':
@@ -17,7 +17,7 @@ def collect_data(items):
     except KeyError as e:
         print("KeyError, word pronounciation begins with: " + str(e))
 
-def analyze_file(filename='phoneticdb.txt'):
+def analyze_file(filename='phoneticdb.txt') -> dict():
     with open('phoneticdb.txt', 'r') as infile:
         for line in infile:
             parse_line(line)
