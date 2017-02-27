@@ -32,3 +32,4 @@ if __name__ == "__main__":
     print(data)
     print(lines)
     print(data['G'] + data['JH'])
+
